@@ -1,0 +1,21 @@
+
+/* .header1{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.header2{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+table{
+    width:100%;
+} */
+.container{
+    text-align: center;
+}
+.editBtn{
+width: 100px;
+}
+.row{
+    margin: 5% auto;
+}

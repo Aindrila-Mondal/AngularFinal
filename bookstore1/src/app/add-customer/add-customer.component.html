@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+      <h2 class="text-center">Add customer</h2>
+      <form [formGroup]="createForm">
+        <div class="form-group">
+            <label>emailId:</label>
+            <input name=emailId class="form-control" id="emailId"[formControl]="createForm.controls.emailId" >
+            <span *ngIf="createForm.controls.emailId.invalid && createForm.controls.emailId.touched">Enter emailId</span>
+        </div>
+        <div class="form-group">
+            <label>Name:</label>
+            <input name=customerName class="form-control" id="customerName" [formControl]="createForm.controls.customerName">
+            <span *ngIf="createForm.controls.customerName.invalid && createForm.controls.customerName.touched">Enter customerName</span>
+          </div>
+          <div class="form-group">
+            <label>password:</label>
+            <input  name=password class="form-control" id="password" [formControl]="createForm.controls.password">
+            <span *ngIf="createForm.controls.password.invalid && createForm.controls.password.touched">Enter password min 6 digits</span>
+          </div>
+          <div class="form-group">
+          <label>phoneNumber:</label>
+                <input name=phoneNumber class="form-control" id="phoneNumber" [formControl]="createForm.controls.phoneNumber">
+                <span *ngIf="createForm.controls.phoneNumber.invalid && createForm.controls.phoneNumber.touched">Enter phoneNumber</span>
+          </div>
+          <div class="form-group">
+            <label>address:</label>
+                  <input name=address class="form-control" id="address" [formControl]="createForm.controls.address">
+                  <span *ngIf="createForm.controls.address.invalid && createForm.controls.address.touched">Enter address</span>
+            </div>
+            <div class="form-group">
+              <label>zipCode:</label>
+                    <input name=zipCode class="form-control" id="zipCode" [formControl]="createForm.controls.zipCode">
+                    <span *ngIf="createForm.controls.zipCode.invalid && createForm.controls.zipCode.touched">EnterzipCode</span>
+              </div>
+              <div class="form-group">
+                <label>country:</label>
+                      <input name=country class="form-control" id="country" [formControl]="createForm.controls.country">
+                      <span *ngIf="createForm.controls.country.invalid && createForm.controls.country.touched">Enter country</span>
+                </div>
+    
+      <button class="btn btn-success" (click)="createCustomer()">Create</button>
+      <br>
+
+    </form>
+    </div>
+    
+</body>
+</html>

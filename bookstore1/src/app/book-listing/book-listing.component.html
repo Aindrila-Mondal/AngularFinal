@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="center-block">
+    <div class="header1">
+  <h3>
+    User Management
+  </h3>
+    </div>
+  <div class="header2">
+  <h3>
+    <a href="#">create new user</a>
+  </h3>
+  </div>
+  <table mdbTable border="1">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let emp of elements">
+        <th scope="row">{{emp.index}}</th>
+        <td>{{emp.id}}</td>
+        <td>{{emp.title}}</td>
+        <td>{{emp.author}}</td>
+        <td>{{emp.category}}</td>
+        <td>{{emp.price}}</td>
+        <td>{{emp.lastUpdated}}</td>
+        <td><a href="#">Edit</a><br><a href="#">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>
+
+

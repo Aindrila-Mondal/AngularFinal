@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+      <div class="center-block">
+  <div class="header1">
+<h3>
+  User Management
+</h3>
+  </div>
+<div class="header2">
+<h5>
+  <a routerLink="/add-users">Create New User</a>
+  <router-outlet></router-outlet>
+</h5>
+</div>
+<table mdbTable border="1">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let user of users; let i = index">
+      <th scope="row">{{i+1}}</th>
+        <td>{{user.adminId}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.adminName}}</td>
+      <td><a routerLink="/add-users"><button class="btn btn-warning editBtn">Edit</button></a>
+        <router-outlet></router-outlet><br><button class="btn btn-danger editBtn" (click)="deleteUserById(user.adminId)" >Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<router-outlet></router-outlet>

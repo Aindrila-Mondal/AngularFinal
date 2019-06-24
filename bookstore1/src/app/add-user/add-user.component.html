@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+      <h2 class="text-center">Add User</h2>
+      <form [formGroup]="createForm">
+        <div class="form-group">
+            <label>adminId:</label>
+            <input name=adminId class="form-control" id="adminId"[formControl]="createForm.controls.adminId" >
+            <span *ngIf="createForm.controls.adminId.invalid && createForm.controls.adminId.touched">Enter adminId</span>
+        </div>
+        <div class="form-group">
+            <label>Name:</label>
+            <input name=adminName class="form-control" id="adminName" [formControl]="createForm.controls.adminName">
+            <span *ngIf="createForm.controls.adminName.invalid && createForm.controls.adminName.touched">Enter adminName</span>
+          </div>
+          <div class="form-group">
+          <label>email:</label>
+                <input name=email class="form-control" id="email" [formControl]="createForm.controls.email">
+                <span *ngIf="createForm.controls.email.invalid && createForm.controls.email.touched">Enter email</span>
+          </div>
+          <div class="form-group">
+                <label>password:</label>
+                <input  name=password class="form-control" id="password" [formControl]="createForm.controls.password">
+                <span *ngIf="createForm.controls.password.invalid && createForm.controls.password.touched">Enter password min 6 digits</span>
+              </div>
+       
+    
+      <button class="btn btn-success" (click)="createUser()">Create</button>
+      <br>
+      <button class="btn btn-success" (click)="updateUser()">update</button>
+    </form>
+    </div>
+    
+</body>
+</html>
