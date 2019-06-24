@@ -24,5 +24,6 @@ export class AddUserService {
     let baseUrl: string;
     baseUrl= this.userUrl+"/updateAdmin";  
     return this.http.put(baseUrl + '/' + user.adminId, user);  
+   
   }  
 }

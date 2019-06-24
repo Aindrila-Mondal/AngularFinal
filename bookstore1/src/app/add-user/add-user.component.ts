@@ -44,12 +44,20 @@ export class AddUserComponent implements OnInit {
   }
 
   updateUser(): void {
+    if(!this.createForm.invalid){
     console.log(" ##### edit "+ this.user.adminId);
-    this.AddUserService.updateUser(this.user)
+    this.AddUserService.updateUser(this.createForm.value)
         .subscribe( data => {
           alert("User updated successfully.");
+          this.router.navigate(['']);
         });
   
-  };
+  }
+  else
+  {
+    alert("enter  correct details first");
+    console.log("error shown here")
+  }
 
   }
+}

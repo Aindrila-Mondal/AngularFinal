@@ -39,7 +39,7 @@ export class AddCustomerComponent implements OnInit {
     }
     else
     {
-      alert("enter details first");
+      alert("enter correct details");
       console.log("error shown here")
     }
 
